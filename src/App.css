@@ -1,38 +1,72 @@
-.App {
-  text-align: center;
+/* Style the sidebar - fixed full height */
+.sidebar {
+  height: 100%;
+  width: 160px;
+  position: fixed;
+  display: inline-block;
+  z-index: 1;
+  top: 1;
+  left: 0;
+  background-color: rgb(255, 255, 255);
+  overflow-x: hidden;
+  padding-top: 16px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Style sidebar links */
+.sidebar a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #000000;
+  display: block;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Style links on mouse-over */
+.sidebar a:hover {
+  color: #fdc50a;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.abm-container {
+  height: 100%;
+  overflow: auto;
+  overflow-x: auto;
+  overflow-y: auto;
 }
 
-.App-link {
-  color: #61dafb;
+.items-container {
+  position: fixed;
+  height: calc(100% - 50px);
+  width: calc(100% - 170px);
+  margin-top: 50px;
+  margin-left: 160px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.action-container {
+  height: 60px;
+}
+
+.action-container-right {
+  float: right;
+  margin-right: 15px;
+  margin-top: 10px;
+}
+
+.action-container-left {
+  float: left;
+  width: 90%;
+  margin-top: 10px;
+}
+
+.item-action {
+  color: #000000;
+  display: inline-block;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.add-container {
+  margin-left: 5px;
+  margin-right: 5px;
 }
