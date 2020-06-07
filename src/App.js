@@ -5,6 +5,8 @@ import Friend from './component/Friend';
 import SaveFriend from './component/SaveFriend';
 import List from './component/List';
 import Routine from './component/Routine';
+import SaveRoutine from './component/SaveRoutine';
+import Home from './component/Home';
 
 import { BrowserRouter, Route } from 'react-router-dom'
 
@@ -114,6 +116,11 @@ export default class App extends Component {
         <SideBar/>
         <div className="items-container">
           <BrowserRouter>
+            <Route exact path="/home" render={props => (
+              <React.Fragment>
+                <Home />
+              </React.Fragment>
+            )} />
             <Route exact path="/friends" render={props => (
                 <React.Fragment>
                   <List 
@@ -151,6 +158,16 @@ export default class App extends Component {
                   getTitles={ this.getRoutineTitles }
                   getNewItem={ this.getNewRoutine } 
                   />
+                </React.Fragment>
+              )} />
+              <Route exact path="/routines/create" render={props => (
+                <React.Fragment>
+                  <SaveRoutine />
+                </React.Fragment>
+              )} />
+              <Route exact path="/routines/update" render={props => (
+                <React.Fragment>
+                  <SaveRoutine />
                 </React.Fragment>
               )} />
           </BrowserRouter>

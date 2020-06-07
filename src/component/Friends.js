@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Table, Button } from '../../node_modules/react-bootstrap';
 import SearchFriend from './SearchFriend';
 import Friend from './Friend';
-import PropsTypes from 'prop-types'
+import PropsTypes from 'prop-types';
 
 
 class Friends extends Component {
